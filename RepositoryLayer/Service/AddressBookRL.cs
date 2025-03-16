@@ -49,5 +49,12 @@ namespace RepositoryLayer.Service
         }
 
 
+        public async Task<List<AddressBookEntry>> GetAddressBookEntries(int id)
+        {
+            return await _context.AddressBookEntries
+           .Where(entry => entry.UserId == id)
+           .ToListAsync();
+        }
     }
+
 }

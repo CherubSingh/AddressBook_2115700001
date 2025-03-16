@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BusinessLayer.Interface;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Service;
 
@@ -41,5 +40,13 @@ namespace BusinessLayer.Service
         {
             await _addressBookRL.DeleteContactById(id);
         }
+
+
+        public async Task<List<AddressBookEntry>> GetAddressBookEntries(int id)
+        {
+            return await _addressBookRL.GetAddressBookEntries(id);
+        }
+
+
     }
 }
