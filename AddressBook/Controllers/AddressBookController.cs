@@ -135,7 +135,6 @@ public class AddressBookController : ControllerBase
     }
 
 
-
     private int? GetUserId()
     {
         var userIdClaim = User.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);

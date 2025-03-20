@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ModelLayer.DTO
 {
-    internal class ForgotPasswordModel
+    public class ForgotPasswordModel
     {
+        public string Email { get; set; } = string.Empty;
     }
 }

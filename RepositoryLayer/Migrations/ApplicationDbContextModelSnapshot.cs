@@ -21,83 +21,83 @@ namespace RepositoryLayer.Migrations
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("RepositoryLayer.Entity.AddressBookEntry", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int");
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                b.Property<string>("Address")
-                    .IsRequired()
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                b.Property<string>("EmailAddress")
-                    .IsRequired()
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("EmailAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                b.Property<string>("Name")
-                    .IsRequired()
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                b.Property<string>("PhoneNumber")
-                    .IsRequired()
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                b.Property<int>("UserId")
-                    .HasColumnType("int");
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
 
-                b.HasKey("Id");
+                    b.HasKey("Id");
 
-                b.HasIndex("UserId");
+                    b.HasIndex("UserId");
 
-                b.ToTable("AddressBookEntries");
-            });
+                    b.ToTable("AddressBookEntries");
+                });
 
             modelBuilder.Entity("RepositoryLayer.Entity.User", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int");
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                b.Property<string>("Email")
-                    .IsRequired()
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                b.Property<string>("Password")
-                    .IsRequired()
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                b.Property<string>("Role")
-                    .IsRequired()
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("Role")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                b.Property<string>("Username")
-                    .IsRequired()
-                    .HasColumnType("nvarchar(max)");
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                b.HasKey("Id");
+                    b.HasKey("Id");
 
-                b.ToTable("Users");
-            });
+                    b.ToTable("Users");
+                });
 
             modelBuilder.Entity("RepositoryLayer.Entity.AddressBookEntry", b =>
-            {
-                b.HasOne("RepositoryLayer.Entity.User", "User")
-                    .WithMany("AddressBookEntries")
-                    .HasForeignKey("UserId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired();
+                {
+                    b.HasOne("RepositoryLayer.Entity.User", "User")
+                        .WithMany("AddressBookEntries")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                b.Navigation("User");
-            });
+                    b.Navigation("User");
+                });
 
             modelBuilder.Entity("RepositoryLayer.Entity.User", b =>
-            {
-                b.Navigation("AddressBookEntries");
-            });
+                {
+                    b.Navigation("AddressBookEntries");
+                });
 #pragma warning restore 612, 618
         }
     }
