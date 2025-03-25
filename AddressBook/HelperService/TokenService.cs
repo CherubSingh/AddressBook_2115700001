@@ -6,7 +6,7 @@ using System.Text;
 
 namespace AddressBook.HelperService
 {
-    public class TokenService
+    public class TokenService : IAuthenticationService
     {
         private readonly IConfiguration _config;
 

@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{22F74C0D-7E2E-4B88-9AA1-5CC2B7E40150}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddressBooktest", "AddressBook.Tests\AddressBooktest.csproj", "{04A890B1-0610-4354-A831-32332BBCA416}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{22F74C0D-7E2E-4B88-9AA1-5CC2B7E40150}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22F74C0D-7E2E-4B88-9AA1-5CC2B7E40150}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22F74C0D-7E2E-4B88-9AA1-5CC2B7E40150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04A890B1-0610-4354-A831-32332BBCA416}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04A890B1-0610-4354-A831-32332BBCA416}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04A890B1-0610-4354-A831-32332BBCA416}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04A890B1-0610-4354-A831-32332BBCA416}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

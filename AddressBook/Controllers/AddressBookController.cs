@@ -14,10 +14,10 @@ using System.Threading.Tasks;
 [Route("api/addressbook")]
 public class AddressBookController : ControllerBase
 {
-    private readonly AddressBookBL _service;
+    private readonly IAddressBookBL _service;
     private readonly IMapper _mapper;
 
-    public AddressBookController(AddressBookBL service, IMapper mapper)
+    public AddressBookController(IAddressBookBL service, IMapper mapper)
     {
         _service = service;
         _mapper = mapper;

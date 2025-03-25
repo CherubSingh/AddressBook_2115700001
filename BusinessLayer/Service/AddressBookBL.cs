@@ -16,33 +16,33 @@ namespace BusinessLayer.Service
             _addressBookRL = addressBookRL;
         }
 
-        public async Task<List<AddressBookEntry>> GetAllContactsAsync()
+        public virtual async Task<List<AddressBookEntry>> GetAllContactsAsync()
         {
             return await _addressBookRL.GetAllContact();
         }
 
-        public async Task<AddressBookEntry?> GetContactByIdAsync(int id)
+        public virtual async Task<AddressBookEntry?> GetContactByIdAsync(int id)
         {
             return await _addressBookRL.GetContactById(id);
         }
 
-        public async Task AddNewContactAsync(AddressBookEntry entry)
+        public virtual async Task AddNewContactAsync(AddressBookEntry entry)
         {
             await _addressBookRL.AddNewContact(entry);
         }
 
-        public async Task UpdateContactAsync(AddressBookEntry entry)
+        public virtual async Task UpdateContactAsync(AddressBookEntry entry)
         {
             await _addressBookRL.UpdateContact(entry);
         }
 
-        public async Task DeleteContactByIdAsync(int id)
+        public virtual async Task DeleteContactByIdAsync(int id)
         {
             await _addressBookRL.DeleteContactById(id);
         }
 
 
-        public async Task<List<AddressBookEntry>> GetAddressBookEntries(int id)
+        public virtual async Task<List<AddressBookEntry>> GetAddressBookEntries(int id)
         {
             return await _addressBookRL.GetAddressBookEntries(id);
         }

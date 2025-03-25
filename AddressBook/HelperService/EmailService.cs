@@ -3,7 +3,7 @@ using System.Net;
 
 namespace AddressBook.HelperService
 {
-    public class EmailService
+    public class EmailService : IEmailService
     {
         private readonly IConfiguration _config;
 

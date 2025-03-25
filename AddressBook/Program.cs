@@ -101,8 +101,8 @@ try
     // Dependency Injection
     builder.Services.AddScoped<AddressBookRL>();
     builder.Services.AddScoped<AddressBookBL>();
-    builder.Services.AddScoped<TokenService>();
-    builder.Services.AddScoped<EmailService>();
+    builder.Services.AddScoped<IAuthenticationService, TokenService>();
+    builder.Services.AddScoped<IEmailService, EmailService>();
 
     // RabbitMQ Producer and Consumer
     builder.Services.AddSingleton<RabbitMQService>(); // Publisher
